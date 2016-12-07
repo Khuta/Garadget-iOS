@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A3EEC3400750682925AD0BFA /* Pods_Garadget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA3306F5F1E58F9B76AEAA8 /* Pods_Garadget.framework */; };
 		DBD379C11DF818EA00C9A5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD379C01DF818EA00C9A5EA /* AppDelegate.swift */; };
-		DBD379C31DF818EA00C9A5EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD379C21DF818EA00C9A5EA /* ViewController.swift */; };
+		DBD379C31DF818EA00C9A5EA /* VolpisLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */; };
 		DBD379C61DF818EA00C9A5EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD379C41DF818EA00C9A5EA /* Main.storyboard */; };
 		DBD379C81DF818EA00C9A5EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD379C71DF818EA00C9A5EA /* Assets.xcassets */; };
 		DBD379CB1DF818EA00C9A5EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD379C91DF818EA00C9A5EA /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		DBA3306F5F1E58F9B76AEAA8 /* Pods_Garadget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Garadget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD379BD1DF818EA00C9A5EA /* Garadget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garadget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD379C01DF818EA00C9A5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBD379C21DF818EA00C9A5EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolpisLoginViewController.swift; sourceTree = "<group>"; };
 		DBD379C51DF818EA00C9A5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBD379C71DF818EA00C9A5EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBD379CA1DF818EA00C9A5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		DBD379D41DF81A7100C9A5EA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DBD379C21DF818EA00C9A5EA /* ViewController.swift */,
+				DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBD379C31DF818EA00C9A5EA /* ViewController.swift in Sources */,
+				DBD379C31DF818EA00C9A5EA /* VolpisLoginViewController.swift in Sources */,
 				DBD379C11DF818EA00C9A5EA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.volpis.garadget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -391,6 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.volpis.garadget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
