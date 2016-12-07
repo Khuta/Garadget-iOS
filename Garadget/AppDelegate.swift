@@ -24,7 +24,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SparkCloud.sharedInstance().oAuthClientId = keys.oAuthClientId()
         SparkCloud.sharedInstance().oAuthClientSecret = keys.oAuthSecret()
         
+        UIApplication.shared.statusBarStyle = .lightContent
+        
+        self.moveToRootVC()
+        
         return true
+    }
+    
+    func moveToRootVC() {
+        if SparkCloud.sharedInstance().isAuthenticated {
+            self.window?.rootViewController = InternalHelper.StoryboardType.main.getStoryboard().instantiateViewController(withIdentifier: InternalHelper.ViewControllerIdentifier.swRevealVC.rawValue)
+        } else {
+            self.window?.rootViewController = InternalHelper.StoryboardType.main.getStoryboard().instantiateViewController(withIdentifier: InternalHelper.ViewControllerIdentifier.loginVC.rawValue)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

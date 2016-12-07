@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "30E614182AD1FD127663693D5B56EB21"
+               BlueprintIdentifier = "1242AABF07357E3FA1596AF7C33E0A3E"
                BuildableName = "Spark_SDK.framework"
                BlueprintName = "Spark-SDK"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30E614182AD1FD127663693D5B56EB21"
+            BlueprintIdentifier = "1242AABF07357E3FA1596AF7C33E0A3E"
             BuildableName = "Spark_SDK.framework"
             BlueprintName = "Spark-SDK"
             ReferencedContainer = "container:Pods.xcodeproj">

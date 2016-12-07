@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SWRevealViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Spark-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B3ADD628632B8E332522FE32767D8C0</key>
+		<key>1242AABF07357E3FA1596AF7C33E0A3E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30E614182AD1FD127663693D5B56EB21</key>
+		<key>31F27EC2E3F547DF65C406F17CB0C4D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9FA05F6202F4580BA1FF8BEF8F82D6D</key>
+		<key>82B2438148F0EB567DA15A05DAB012E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B309AA3140E5872C3C4EBF9BC745B0DB</key>
+		<key>86E93E5A282A79F37A9A08D703CC919C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -78,6 +83,11 @@
 			<true/>
 		</dict>
 		<key>D228286947C78954173BBDCC39A652CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF8E6A3E84A23777E1A8E3E097D88220</key>
 		<dict>
 			<key>primary</key>
 			<true/>

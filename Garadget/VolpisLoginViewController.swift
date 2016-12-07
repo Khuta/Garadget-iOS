@@ -11,28 +11,25 @@ import UIKit
 import SparkSetup
 import Spark_SDK
 
-class VolpisLoginViewController: UIViewController, SparkSetupMainControllerDelegate {
+class VolpisLoginViewController: UIViewController {
     
     let setupController = SparkSetupMainController()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if SparkCloud.sharedInstance().isAuthenticated {
-            SparkCloud.sharedInstance().logout()
-        } else {
+        if !SparkCloud.sharedInstance().isAuthenticated {
             self.didLoadSparkVC()
         }
     }
     
+    
+    // MARK: - Load spark vc
     func didLoadSparkVC() {
         if let setupController = SparkSetupMainController(authenticationOnly: true) {
             
@@ -43,19 +40,23 @@ class VolpisLoginViewController: UIViewController, SparkSetupMainControllerDeleg
             customizationVC?.brandImageBackgroundColor = UIColor.white
             
             setupController.delegate = self
-            self.present(setupController, animated: false, completion: nil)
+            self.present(setupController, animated: true, completion: nil)
         }
     }
 
+}
+
+extension VolpisLoginViewController: SparkSetupMainControllerDelegate {
     func sparkSetupViewController(_ controller: SparkSetupMainController!, didNotSucceeedWithDeviceID deviceID: String!) {
         
     }
     
     func sparkSetupViewController(_ controller: SparkSetupMainController!, didFinishWith result: SparkSetupMainControllerResult, device: SparkDevice!) {
         controller.delegate = nil
+        
+        let swRevealVC = InternalHelper.StoryboardType.main.getStoryboard().instantiateViewController(withIdentifier: InternalHelper.ViewControllerIdentifier.swRevealVC.rawValue)
+        
+        self.present(swRevealVC, animated: true, completion: nil)
     }
-    
-    
-
 }
 

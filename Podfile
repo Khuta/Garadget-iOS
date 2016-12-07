@@ -7,6 +7,8 @@ target 'Garadget' do
 
   pod "Spark-SDK"
   pod "SparkSetup"
+  
+  pod 'SWRevealViewController', '~> 2.3.0'
 
 end
 

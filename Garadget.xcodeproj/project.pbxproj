@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A3EEC3400750682925AD0BFA /* Pods_Garadget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA3306F5F1E58F9B76AEAA8 /* Pods_Garadget.framework */; };
+		DB7ABF931DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7ABF921DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift */; };
+		DB83AD7A1DF8B91500E2D2BE /* VolpisAllDorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83AD791DF8B91500E2D2BE /* VolpisAllDorsViewController.swift */; };
+		DB83AD7D1DF8BA3000E2D2BE /* InternalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */; };
+		DBA7C9ED1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA7C9EC1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift */; };
 		DBD379C11DF818EA00C9A5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD379C01DF818EA00C9A5EA /* AppDelegate.swift */; };
 		DBD379C31DF818EA00C9A5EA /* VolpisLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */; };
 		DBD379C61DF818EA00C9A5EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD379C41DF818EA00C9A5EA /* Main.storyboard */; };
@@ -18,7 +22,11 @@
 /* Begin PBXFileReference section */
 		2CFA787A78702314E1ECB01E /* Pods-Garadget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garadget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Garadget/Pods-Garadget.release.xcconfig"; sourceTree = "<group>"; };
 		BA74E4C83B287C4036ABDD1C /* Pods-Garadget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garadget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Garadget/Pods-Garadget.debug.xcconfig"; sourceTree = "<group>"; };
+		DB7ABF921DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisLeftMenuViewController.swift; sourceTree = "<group>"; };
+		DB83AD791DF8B91500E2D2BE /* VolpisAllDorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisAllDorsViewController.swift; sourceTree = "<group>"; };
+		DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalHelper.swift; sourceTree = "<group>"; };
 		DBA3306F5F1E58F9B76AEAA8 /* Pods_Garadget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Garadget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA7C9EC1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultGaradgetViewController.swift; sourceTree = "<group>"; };
 		DBD379BD1DF818EA00C9A5EA /* Garadget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garadget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD379C01DF818EA00C9A5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolpisLoginViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +65,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DB7ABF911DF8D12B0017AFBE /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DB7ABF921DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift */,
+			);
+			name = LeftMenu;
+			sourceTree = "<group>";
+		};
+		DB83AD781DF8B8FE00E2D2BE /* Dors */ = {
+			isa = PBXGroup;
+			children = (
+				DB83AD791DF8B91500E2D2BE /* VolpisAllDorsViewController.swift */,
+			);
+			name = Dors;
+			sourceTree = "<group>";
+		};
+		DB83AD7B1DF8BA0900E2D2BE /* InternalHelper */ = {
+			isa = PBXGroup;
+			children = (
+				DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */,
+			);
+			name = InternalHelper;
+			sourceTree = "<group>";
+		};
+		DBA7C9EB1DF8B4AF00BCAC46 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		DBD379B41DF818EA00C9A5EA = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +118,7 @@
 		DBD379BF1DF818EA00C9A5EA /* Garadget */ = {
 			isa = PBXGroup;
 			children = (
+				DB83AD7B1DF8BA0900E2D2BE /* InternalHelper */,
 				DBD379D51DF81A8F00C9A5EA /* Default */,
 				DBD379D21DF81A6100C9A5EA /* Models */,
 				DBD379D31DF81A6700C9A5EA /* Views */,
@@ -104,7 +145,10 @@
 		DBD379D41DF81A7100C9A5EA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */,
+				DBA7C9EC1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift */,
+				DB7ABF911DF8D12B0017AFBE /* LeftMenu */,
+				DBA7C9EB1DF8B4AF00BCAC46 /* Login */,
+				DB83AD781DF8B8FE00E2D2BE /* Dors */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -245,7 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBD379C31DF818EA00C9A5EA /* VolpisLoginViewController.swift in Sources */,
+				DB83AD7D1DF8BA3000E2D2BE /* InternalHelper.swift in Sources */,
+				DBA7C9ED1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift in Sources */,
 				DBD379C11DF818EA00C9A5EA /* AppDelegate.swift in Sources */,
+				DB83AD7A1DF8B91500E2D2BE /* VolpisAllDorsViewController.swift in Sources */,
+				DB7ABF931DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
