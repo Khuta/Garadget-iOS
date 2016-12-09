@@ -43,6 +43,24 @@ class DoorConfigModel: NSObject {
     var nightTimeEnd: Int //ane
     var tzo: String //tzo
     var name: String //nme
+    
+    override init() {
+        self.version = ""
+        self.cnt = -1
+        self.sensorScanInterval = -1
+        self.doorMovingTime = -1
+        self.mot = -1
+        self.buttonPressTime = -1
+        self.buttonPressesDelay = -1
+        self.sensorReadsAmount = -1
+        self.reflectionThreshold = -1
+        self.statusAlerts = -1
+        self.openTimeout = -1
+        self.nightTimeStart = -1
+        self.nightTimeEnd = -1
+        self.tzo = ""
+        self.name = ""
+    }
 
     init(doorConfigString: String) {
         

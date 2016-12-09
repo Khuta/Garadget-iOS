@@ -24,6 +24,14 @@ class NetConfigModel: NSObject {
     var macAddress: String //mac
     var ssid: String //ssid
     
+    override init() {
+        self.ipAddress = ""
+        self.subnet = ""
+        self.gateway = ""
+        self.macAddress = ""
+        self.ssid = ""
+    }
+    
     
     init(netConfigString : String) {
         self.ipAddress = ""

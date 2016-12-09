@@ -10,9 +10,22 @@ import UIKit
 import SWRevealViewController
 import Spark_SDK
 
+private let doorCellIdentifier = "DoorCell"
+
 class VolpisAllDorsViewController: DefaultGaradgetViewController {
     
-    var allDoors: [DoorModel] = [DoorModel]()
+    
+    @IBOutlet weak var allDoorsView: UIView!
+    @IBOutlet weak var allDoorsCollectionView: UICollectionView!
+    @IBOutlet weak var doorImageView: UIImageView!
+    @IBOutlet weak var statusImageView: UIImageView!
+    @IBOutlet weak var doorNameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    
+    
+    var allDoors: NSMutableArray = NSMutableArray()
+    var selectedDoor: DoorModel = DoorModel()
     
     enum DeviceVariables: String {
         case doorConfig = "doorConfig"
@@ -28,9 +41,6 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
     }
     
     func prepareSWRevealView() {
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-        
         let menuButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_tab_settings"), style: UIBarButtonItemStyle.plain, target: self.revealViewController(), action:#selector(self.revealViewController().revealToggle(_:)))
         menuButton.tintColor = UIColor.white
         
@@ -51,6 +61,9 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
                 if (sparkDevices as? [SparkDevice]) != nil {
                     
                     //Set Doors models
+                    
+                    var index = 0
+                    
                     for device in sparkDevices as! [SparkDevice] {
                         
                         var doorConfigString = ""
@@ -58,6 +71,7 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
                         var netConfigString = ""
                         
                         if device.connected {
+                            print("1")
                             device.getVariable(DeviceVariables.doorConfig.rawValue, completion: { (result, error) in
                                 if !(error != nil) {
                                     doorConfigString = result as! String
@@ -76,21 +90,85 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
                                                     
                                                     let door = DoorModel(doorConfig: doorConfig, doorStatus: doorStatus, netConfig: netConfig, device: device)
                                                     
-                                                    self.allDoors.append(door)
+                                                    self.allDoors.add(door)
+                                                    index = index + 1
+                                                    
+                                                    if index == (sparkDevices?.count)! {
+                                                        self.selectedDoor = self.allDoors[0] as! DoorModel
+                                                        self.allDoors.removeObject(at: 0)
+                                                        self.allDoorsCollectionView.reloadData()
+                                                        self.didUpdateCurrentDoorData()
+                                                        
+                                                    }
                                                 }
                                             })
                                         }
                                     })
                                 }
                             })
+                        } else {
+                            let door = DoorModel(doorConfig: DoorConfigModel(), doorStatus: DoorStatusModel(), netConfig: NetConfigModel(), device: device)
+                            self.allDoors.add(door)
+                            index = index + 1
+                            
+                            if index == (sparkDevices?.count)! {
+                                self.selectedDoor = self.allDoors[0] as! DoorModel
+                                self.allDoors.removeObject(at: 0)
+                                self.allDoorsCollectionView.reloadData()
+                                self.didUpdateCurrentDoorData()
+                            }
                         }
                     }
                 }
             }
         }
     }
+    
+    func didUpdateCurrentDoorData() {
+        self.doorImageView.image = self.selectedDoor.getDoorImage()
+        self.statusImageView.image = self.selectedDoor.getSignalImage()
+        
+        self.doorNameLabel.text = self.selectedDoor.getDoorName()
+        
+        if self.selectedDoor.device.connected {
+            self.timeLabel.text = "\(InternalHelper.DoorStatusConstants.open.rawValue) \(self.selectedDoor.doorStatus.time)"
+        } else {
+            self.timeLabel.text = "\(InternalHelper.DoorStatusConstants.offline.rawValue) \(self.selectedDoor.getFormattedTime())"
+        }
+    }
 
     // MARK: - Navigation
+}
 
-
+extension VolpisAllDorsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.allDoors.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let doorCell = collectionView.dequeueReusableCell(withReuseIdentifier: doorCellIdentifier, for: indexPath) as! VolpisDoorCollectionViewCell
+        doorCell.currentDoor = self.allDoors[indexPath.row] as! DoorModel
+        doorCell.updateContentData()
+        return doorCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let tempDoor: DoorModel = self.allDoors[indexPath.row] as! DoorModel
+        self.allDoors.replaceObject(at: indexPath.row, with: self.selectedDoor)
+        self.selectedDoor = tempDoor
+        self.allDoorsCollectionView.reloadItems(at: [IndexPath(item: indexPath.row, section: 0)])
+        self.didUpdateCurrentDoorData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath:IndexPath) -> CGSize {
+        return CGSize(width: self.allDoorsView.frame.size.height * 0.8, height: self.allDoorsView.frame.size.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: UIScreen.main.bounds.width - (self.allDoorsView.frame.size.height * 0.8 * CGFloat(self.allDoors.count)), bottom: 0, right: 0)
+    }
 }

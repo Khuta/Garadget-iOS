@@ -22,6 +22,13 @@ class DoorStatusModel: NSObject {
     var reflectionRate: Int //sensor
     var signalStrength: Int //signal
     
+    override init() {
+        self.status = ""
+        self.time = ""
+        self.reflectionRate = -1
+        self.signalStrength = -1
+    }
+    
     
     init(doorStatusString : String) {
         self.status = ""

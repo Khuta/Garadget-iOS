@@ -11,6 +11,15 @@ import Foundation
 
 class InternalHelper {
     
+    enum DoorStatusConstants: String {
+        case open = "open"
+        case closed = "closed"
+        case closing = "closing"
+        case opening = "opening"
+        case stopped = "stopped"
+        case offline = "offline"
+    }
+    
     enum ViewControllerIdentifier: String {
         case swRevealVC = "SWRevealVC"
         case allDorsVC = "AllDorsVC"
