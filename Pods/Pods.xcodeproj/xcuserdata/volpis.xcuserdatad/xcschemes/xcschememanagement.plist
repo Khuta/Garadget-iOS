@@ -49,15 +49,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UICircularProgressRing.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1242AABF07357E3FA1596AF7C33E0A3E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>31F27EC2E3F547DF65C406F17CB0C4D6</key>
+		<key>310DD0212EF1476A4F21707ED75806F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82B2438148F0EB567DA15A05DAB012E5</key>
+		<key>A4B7631F3AEDB9976A34D6BEE0FA880A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86E93E5A282A79F37A9A08D703CC919C</key>
+		<key>A6F910C81816C9D5B2FD7E056A11947C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA4BCAC1E5C7B13BABD1ED9A54335031</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4F88A16D811823D0EE468CBAF2978DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,12 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DF8E6A3E84A23777E1A8E3E097D88220</key>
+		<key>E1B7EC9083F43091092793A096E99914</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E1B7EC9083F43091092793A096E99914</key>
+		<key>F796ACD994EBCC76EFB27717C378B648</key>
 		<dict>
 			<key>primary</key>
 			<true/>

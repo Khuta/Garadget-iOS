@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -279,7 +278,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DoorCell" id="FCS-qo-o7h" customClass="VolpisDoorCollectionViewCell" customModule="Garadget" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="3" width="100" height="127"/>
+                                                <rect key="frame" x="0.0" y="3.5" width="100" height="127"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="127"/>
@@ -397,6 +396,46 @@
                                                     <constraint firstAttribute="width" secondItem="WfI-Jl-rJF" secondAttribute="height" multiplier="1:1" id="56a-ev-4E2"/>
                                                 </constraints>
                                             </imageView>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXV-48-gTc" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
+                                                <rect key="frame" x="65.5" y="66" width="131.5" height="131.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                        <real key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                                                        <color key="value" red="0.0" green="0.40000000000000002" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                        <real key="value" value="28"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="innerRingWidth">
+                                                        <real key="value" value="17"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
+                                                        <real key="value" value="21"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="viewStyle">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueIndicator" value="%"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="innerRingSpacing">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxW-f6-0BV">
+                                                <rect key="frame" x="-0.5" y="0.0" width="263" height="263"/>
+                                                <connections>
+                                                    <action selector="didPressUpdateDoorButton:" destination="Bg4-QF-MNM" eventType="touchUpInside" id="lM7-Xm-IYU"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzR-BS-fcQ">
                                                 <rect key="frame" x="0.0" y="261" width="263" height="0.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
@@ -414,16 +453,24 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="WfI-Jl-rJF" secondAttribute="trailing" id="13E-4j-Z2t"/>
                                             <constraint firstItem="WfI-Jl-rJF" firstAttribute="leading" secondItem="Fld-bK-kFQ" secondAttribute="leading" id="2xl-Xu-W5O"/>
+                                            <constraint firstItem="jXV-48-gTc" firstAttribute="width" secondItem="WfI-Jl-rJF" secondAttribute="width" multiplier="0.5" id="4DJ-VZ-hbF"/>
                                             <constraint firstItem="eyW-P6-v7S" firstAttribute="top" secondItem="HzR-BS-fcQ" secondAttribute="bottom" id="Cti-RP-zfs"/>
                                             <constraint firstItem="WfI-Jl-rJF" firstAttribute="top" secondItem="Fld-bK-kFQ" secondAttribute="top" id="DQX-GH-4SI"/>
                                             <constraint firstItem="HzR-BS-fcQ" firstAttribute="top" secondItem="pBa-Se-PS2" secondAttribute="bottom" constant="-2" id="E3a-ST-Yz6"/>
                                             <constraint firstItem="eyW-P6-v7S" firstAttribute="height" secondItem="HzR-BS-fcQ" secondAttribute="height" id="EVz-jd-yEU"/>
                                             <constraint firstAttribute="trailing" secondItem="pBa-Se-PS2" secondAttribute="trailing" id="Eba-YD-Wsi"/>
                                             <constraint firstItem="eyW-P6-v7S" firstAttribute="width" secondItem="Fld-bK-kFQ" secondAttribute="width" id="Fcx-WA-ekY"/>
+                                            <constraint firstItem="jXV-48-gTc" firstAttribute="height" secondItem="WfI-Jl-rJF" secondAttribute="height" multiplier="0.5" id="Gon-Zf-HaY"/>
+                                            <constraint firstItem="jXV-48-gTc" firstAttribute="centerX" secondItem="WfI-Jl-rJF" secondAttribute="centerX" id="I1P-TQ-2xJ"/>
                                             <constraint firstItem="pBa-Se-PS2" firstAttribute="top" secondItem="Fld-bK-kFQ" secondAttribute="top" id="Ldv-aV-t3U"/>
+                                            <constraint firstItem="cxW-f6-0BV" firstAttribute="height" secondItem="WfI-Jl-rJF" secondAttribute="height" id="Tea-gM-kGu"/>
                                             <constraint firstAttribute="bottom" secondItem="eyW-P6-v7S" secondAttribute="bottom" priority="333" id="YB1-PQ-ZqL"/>
                                             <constraint firstItem="pBa-Se-PS2" firstAttribute="leading" secondItem="Fld-bK-kFQ" secondAttribute="leading" id="aKM-xq-ejM"/>
+                                            <constraint firstItem="cxW-f6-0BV" firstAttribute="width" secondItem="WfI-Jl-rJF" secondAttribute="width" id="arw-AA-iGj"/>
                                             <constraint firstItem="eyW-P6-v7S" firstAttribute="centerX" secondItem="Fld-bK-kFQ" secondAttribute="centerX" id="bPI-e4-c0e"/>
+                                            <constraint firstItem="jXV-48-gTc" firstAttribute="centerY" secondItem="WfI-Jl-rJF" secondAttribute="centerY" id="kBW-ab-GHp"/>
+                                            <constraint firstItem="cxW-f6-0BV" firstAttribute="centerX" secondItem="WfI-Jl-rJF" secondAttribute="centerX" id="oZc-2v-XuI"/>
+                                            <constraint firstItem="cxW-f6-0BV" firstAttribute="centerY" secondItem="WfI-Jl-rJF" secondAttribute="centerY" id="pPR-ON-B17"/>
                                             <constraint firstItem="HzR-BS-fcQ" firstAttribute="centerX" secondItem="Fld-bK-kFQ" secondAttribute="centerX" id="sod-wl-gGR"/>
                                             <constraint firstItem="HzR-BS-fcQ" firstAttribute="width" secondItem="Fld-bK-kFQ" secondAttribute="width" id="vFe-eb-0QH"/>
                                         </constraints>
@@ -455,6 +502,7 @@
                     <connections>
                         <outlet property="allDoorsCollectionView" destination="Pei-SF-6jc" id="O7L-tv-cMA"/>
                         <outlet property="allDoorsView" destination="hh2-SI-CIN" id="yha-Tq-z1d"/>
+                        <outlet property="circleProgressBar" destination="jXV-48-gTc" id="QC7-oi-qIX"/>
                         <outlet property="doorImageView" destination="pBa-Se-PS2" id="ibc-sC-TWH"/>
                         <outlet property="doorNameLabel" destination="HzR-BS-fcQ" id="zCo-Sb-Xof"/>
                         <outlet property="statusImageView" destination="WfI-Jl-rJF" id="2kL-VA-2KJ"/>

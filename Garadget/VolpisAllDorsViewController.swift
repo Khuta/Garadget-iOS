@@ -9,6 +9,7 @@
 import UIKit
 import SWRevealViewController
 import Spark_SDK
+import UICircularProgressRing
 
 private let doorCellIdentifier = "DoorCell"
 
@@ -21,6 +22,7 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
     @IBOutlet weak var statusImageView: UIImageView!
     @IBOutlet weak var doorNameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var circleProgressBar: UICircularProgressRingView!
     
     
     
@@ -137,7 +139,15 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
         }
     }
 
-    // MARK: - Navigation
+    // MARK: - Actions
+    @IBAction func didPressUpdateDoorButton(_ sender: Any) {
+        self.circleProgressBar.fontColor = UIColor.white
+        self.circleProgressBar.isHidden = false
+        self.circleProgressBar.setProgress(value: 100, animationDuration: 4) {
+            self.circleProgressBar.isHidden = true
+            self.circleProgressBar.setProgress(value: 0, animationDuration: 1.0, completion: nil)
+        }
+    }
 }
 
 extension VolpisAllDorsViewController: UICollectionViewDelegate, UICollectionViewDataSource {

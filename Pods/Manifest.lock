@@ -32,12 +32,14 @@ PODS:
     - Spark-SDK
     - SparkSetup/Comm
   - SWRevealViewController (2.3.0)
+  - UICircularProgressRing (1.1.1)
 
 DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
   - Spark-SDK
   - SparkSetup
   - SWRevealViewController (~> 2.3.0)
+  - UICircularProgressRing (~> 1.1.1)
 
 EXTERNAL SOURCES:
   Keys:
@@ -50,7 +52,8 @@ SPEC CHECKSUMS:
   Spark-SDK: 361c1d3aabc88f7c1eada27427cc8997f5a79ac1
   SparkSetup: 0e63d1cce0c16278b798f383f1ece034032df6a7
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+  UICircularProgressRing: c37697577b2f07841fa901ad162959f6f5530204
 
-PODFILE CHECKSUM: 20aaf7ef329025613073967fe92a44aa3c140f69
+PODFILE CHECKSUM: 63d371e5e1fcd7596e37f3673af42568b3137705
 
 COCOAPODS: 1.1.1
