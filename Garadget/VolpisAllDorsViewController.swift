@@ -34,6 +34,10 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
         case doorStatus = "doorStatus"
         case netConfig = "netConfig"
     }
+    
+    enum SegueIdentifiers: String {
+        case toSettings = "FromAllDoorsToSettings"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +54,7 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
     }
     
     func prepareNavigationController() {
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.barTintColor = InternalHelper.GaradgetColors.green.getColor()
         self.navigationItem.title = InternalHelper.DefaultStrings.allDoorsNavTitle.rawValue
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
@@ -73,7 +78,6 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
                         var netConfigString = ""
                         
                         if device.connected {
-                            print("1")
                             device.getVariable(DeviceVariables.doorConfig.rawValue, completion: { (result, error) in
                                 if !(error != nil) {
                                     doorConfigString = result as! String
@@ -138,6 +142,16 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
             self.timeLabel.text = "\(InternalHelper.DoorStatusConstants.offline.rawValue) \(self.selectedDoor.getFormattedTime())"
         }
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let segueIdentifier = segue.identifier {
+            if segueIdentifier == SegueIdentifiers.toSettings.rawValue {
+                let destinationVC = segue.destination as! VolpisSettingsViewController
+                destinationVC.currentDoor = self.selectedDoor
+            }
+        }
+    }
 
     // MARK: - Actions
     @IBAction func didPressUpdateDoorButton(_ sender: Any) {
@@ -147,6 +161,10 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
             self.circleProgressBar.isHidden = true
             self.circleProgressBar.setProgress(value: 0, animationDuration: 1.0, completion: nil)
         }
+    }
+    
+    @IBAction func didPressSettingsButton(_ sender: Any) {
+        self.performSegue(withIdentifier: SegueIdentifiers.toSettings.rawValue, sender: self)
     }
 }
 

@@ -11,6 +11,12 @@ import Foundation
 
 class InternalHelper {
     
+    enum SettigCellIdentifiers: String {
+        case cellAIdentifier = "SettingsCellTypeA"
+        case cellBIdentifier = "SettingsCellTypeB"
+        case cellCIdentifier = "SettingsCellTypeC"
+    }
+    
     enum DoorStatusConstants: String {
         case open = "open"
         case closed = "closed"
@@ -18,6 +24,7 @@ class InternalHelper {
         case opening = "opening"
         case stopped = "stopped"
         case offline = "offline"
+        case normal = "normal"
     }
     
     enum ViewControllerIdentifier: String {
@@ -43,6 +50,7 @@ class InternalHelper {
     
     enum StoryboardType {
         case main
+        case settings
         
         /*
          Function that based on the storyboard type returns an instance of the storyboard file
@@ -51,6 +59,8 @@ class InternalHelper {
             switch self {
             case .main:
                 return UIStoryboard(name: "Main", bundle: nil)
+            case.settings:
+                return UIStoryboard(name: "SettingsStoryboard", bundle: nil)
             }
         }
         
@@ -61,5 +71,16 @@ class InternalHelper {
     
     //MARK:- Shared Instance Implementation
     static let sharedInstance: InternalHelper = InternalHelper()
+    
+    func getSettingsCellIdentifier(by type: VolpisSettingsViewController.CellTypes) -> String {
+        switch type {
+        case .cellA:
+            return SettigCellIdentifiers.cellAIdentifier.rawValue
+        case .cellB:
+            return SettigCellIdentifiers.cellBIdentifier.rawValue
+        default:
+            return SettigCellIdentifiers.cellCIdentifier.rawValue
+        }
+    }
     
 }

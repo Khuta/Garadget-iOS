@@ -149,6 +149,12 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSG-Z2-Ouh">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="64"/>
+                                                <connections>
+                                                    <action selector="didPressSettingsButton:" destination="Bg4-QF-MNM" eventType="touchUpInside" id="j81-cl-cHa"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -158,6 +164,10 @@
                                             <constraint firstItem="gRI-MP-izS" firstAttribute="top" secondItem="KLo-ZJ-iGJ" secondAttribute="bottom" constant="5" id="Kta-7k-RoM"/>
                                             <constraint firstAttribute="trailing" secondItem="gRI-MP-izS" secondAttribute="trailing" id="WeG-lV-7Ld"/>
                                             <constraint firstItem="KLo-ZJ-iGJ" firstAttribute="leading" secondItem="lvT-VS-B2l" secondAttribute="leading" id="X4X-kc-Ze0"/>
+                                            <constraint firstAttribute="bottom" secondItem="nSG-Z2-Ouh" secondAttribute="bottom" id="h8w-uh-rsl"/>
+                                            <constraint firstAttribute="trailing" secondItem="nSG-Z2-Ouh" secondAttribute="trailing" id="iDg-RZ-Gmg"/>
+                                            <constraint firstItem="nSG-Z2-Ouh" firstAttribute="top" secondItem="lvT-VS-B2l" secondAttribute="top" id="xa8-V3-QrZ"/>
+                                            <constraint firstItem="nSG-Z2-Ouh" firstAttribute="leading" secondItem="lvT-VS-B2l" secondAttribute="leading" id="yGr-Qo-1e1"/>
                                             <constraint firstItem="KLo-ZJ-iGJ" firstAttribute="top" secondItem="lvT-VS-B2l" secondAttribute="top" constant="10" id="yw9-LV-LVr"/>
                                         </constraints>
                                     </view>
@@ -507,11 +517,20 @@
                         <outlet property="doorNameLabel" destination="HzR-BS-fcQ" id="zCo-Sb-Xof"/>
                         <outlet property="statusImageView" destination="WfI-Jl-rJF" id="2kL-VA-2KJ"/>
                         <outlet property="timeLabel" destination="eyW-P6-v7S" id="hSd-Nj-cse"/>
+                        <segue destination="Rgg-9M-d1X" kind="show" identifier="FromAllDoorsToSettings" id="XvV-PP-6F1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUP-Pt-K9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1632.8" y="1311.9940029985009"/>
+        </scene>
+        <!--SettingsStoryboard-->
+        <scene sceneID="oUA-4m-DGU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingsStoryboard" id="Rgg-9M-d1X" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Vq-vq-JRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2422" y="1312"/>
         </scene>
     </scenes>
     <resources>
