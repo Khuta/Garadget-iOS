@@ -90,6 +90,8 @@ class DoorConfigModel: NSObject {
                 self.version = nextVariable[1]
             case DoorConfigVariables.cnt.rawValue:
                 self.cnt = Int(nextVariable[1])!
+            case DoorConfigVariables.rdt.rawValue:
+                self.sensorScanInterval = Int(nextVariable[1])!
             case DoorConfigVariables.mtt.rawValue:
                 self.doorMovingTime = Int(nextVariable[1])!
             case DoorConfigVariables.mot.rawValue:

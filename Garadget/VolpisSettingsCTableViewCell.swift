@@ -21,4 +21,9 @@ class VolpisSettingsCTableViewCell: VolpisDefaultSettingsTableViewCell {
         self.titleKeyLabel.text = self.currentSettingItem["key"] as! String?
         self.valueTextField.text = "\(self.currentSettingItem["value"]!)"
     }
+    
+    // MARK: - Actions
+    @IBAction func didPressTextFieldButton(_ sender: Any) {
+        self.delegate?.didAskForDataPicker(for: self.currentIndexPath)
+    }
 }

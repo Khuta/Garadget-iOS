@@ -14,12 +14,14 @@
 		DB0F37951DFC204B0005FBC3 /* VolpisSettingsBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F37941DFC204B0005FBC3 /* VolpisSettingsBTableViewCell.swift */; };
 		DB0F37971DFC27730005FBC3 /* VolpisSettingsCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F37961DFC27730005FBC3 /* VolpisSettingsCTableViewCell.swift */; };
 		DB0F37991DFC652D0005FBC3 /* VolpisDefaultSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F37981DFC652D0005FBC3 /* VolpisDefaultSettingsTableViewCell.swift */; };
+		DB0F379B1DFC91470005FBC3 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F379A1DFC91470005FBC3 /* SettingsData.swift */; };
 		DB33DF831DFA84E400CB8770 /* DoorConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33DF821DFA84E400CB8770 /* DoorConfigModel.swift */; };
 		DB33DF851DFA8E0800CB8770 /* DoorStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33DF841DFA8E0800CB8770 /* DoorStatusModel.swift */; };
 		DB33DF871DFA909B00CB8770 /* NetConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33DF861DFA909B00CB8770 /* NetConfigModel.swift */; };
 		DB33DF891DFA91CF00CB8770 /* DoorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33DF881DFA91CF00CB8770 /* DoorModel.swift */; };
 		DB33DF8C1DFA97D600CB8770 /* VolpisDoorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33DF8B1DFA97D600CB8770 /* VolpisDoorCollectionViewCell.swift */; };
 		DB7ABF931DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7ABF921DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift */; };
+		DB7FFB101DFCA044007F7C57 /* VolpisDropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7FFB0F1DFCA044007F7C57 /* VolpisDropDownViewController.swift */; };
 		DB83AD7A1DF8B91500E2D2BE /* VolpisAllDorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83AD791DF8B91500E2D2BE /* VolpisAllDorsViewController.swift */; };
 		DB83AD7D1DF8BA3000E2D2BE /* InternalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */; };
 		DBA7C9ED1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA7C9EC1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift */; };
@@ -39,12 +41,14 @@
 		DB0F37941DFC204B0005FBC3 /* VolpisSettingsBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisSettingsBTableViewCell.swift; sourceTree = "<group>"; };
 		DB0F37961DFC27730005FBC3 /* VolpisSettingsCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisSettingsCTableViewCell.swift; sourceTree = "<group>"; };
 		DB0F37981DFC652D0005FBC3 /* VolpisDefaultSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisDefaultSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		DB0F379A1DFC91470005FBC3 /* SettingsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 		DB33DF821DFA84E400CB8770 /* DoorConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorConfigModel.swift; sourceTree = "<group>"; };
 		DB33DF841DFA8E0800CB8770 /* DoorStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorStatusModel.swift; sourceTree = "<group>"; };
 		DB33DF861DFA909B00CB8770 /* NetConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetConfigModel.swift; sourceTree = "<group>"; };
 		DB33DF881DFA91CF00CB8770 /* DoorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorModel.swift; sourceTree = "<group>"; };
 		DB33DF8B1DFA97D600CB8770 /* VolpisDoorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisDoorCollectionViewCell.swift; sourceTree = "<group>"; };
 		DB7ABF921DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisLeftMenuViewController.swift; sourceTree = "<group>"; };
+		DB7FFB0F1DFCA044007F7C57 /* VolpisDropDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisDropDownViewController.swift; sourceTree = "<group>"; };
 		DB83AD791DF8B91500E2D2BE /* VolpisAllDorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisAllDorsViewController.swift; sourceTree = "<group>"; };
 		DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalHelper.swift; sourceTree = "<group>"; };
 		DBA3306F5F1E58F9B76AEAA8 /* Pods_Garadget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Garadget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +96,7 @@
 			children = (
 				DB0F378F1DFC184B0005FBC3 /* Cells */,
 				DB0F37901DFC18630005FBC3 /* VolpisSettingsViewController.swift */,
+				DB7FFB0F1DFCA044007F7C57 /* VolpisDropDownViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */,
+				DB0F379A1DFC91470005FBC3 /* SettingsData.swift */,
 			);
 			name = InternalHelper;
 			sourceTree = "<group>";
@@ -354,9 +360,11 @@
 				DBA7C9ED1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift in Sources */,
 				DBD379C11DF818EA00C9A5EA /* AppDelegate.swift in Sources */,
 				DB0F37951DFC204B0005FBC3 /* VolpisSettingsBTableViewCell.swift in Sources */,
+				DB0F379B1DFC91470005FBC3 /* SettingsData.swift in Sources */,
 				DB83AD7A1DF8B91500E2D2BE /* VolpisAllDorsViewController.swift in Sources */,
 				DB0F37991DFC652D0005FBC3 /* VolpisDefaultSettingsTableViewCell.swift in Sources */,
 				DB33DF831DFA84E400CB8770 /* DoorConfigModel.swift in Sources */,
+				DB7FFB101DFCA044007F7C57 /* VolpisDropDownViewController.swift in Sources */,
 				DB0F37931DFC20390005FBC3 /* VolpisSettingsATableViewCell.swift in Sources */,
 				DB33DF8C1DFA97D600CB8770 /* VolpisDoorCollectionViewCell.swift in Sources */,
 				DB33DF871DFA909B00CB8770 /* NetConfigModel.swift in Sources */,
