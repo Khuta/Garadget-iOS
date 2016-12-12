@@ -4,7 +4,57 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>1PasswordExtension-OnePasswordExtensionResources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>1PasswordExtension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Keys.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Garadget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SWRevealViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Spark-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SparkSetup-SparkSetup.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SparkSetup.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UICircularProgressRing.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -12,7 +62,57 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9F827FFCEC6AE4937EB51BF3CA6CDD91</key>
+		<key>00F114F285F5DA9B0579519397489E72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>389A8C36E1DACBC15964FD8CFACE0A9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A5CAFAE995083EED9EF3C572911E804</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0F3BD46C5CCB26BCEA514DC4D59A115</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B410B5AE1AD35A526430D8C72F2D81FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA21A2A3B5C67D48A16261B505B1E838</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C718BE338C94D32C0C3360498D504A2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D228286947C78954173BBDCC39A652CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1B7EC9083F43091092793A096E99914</key>
 		<dict>
 			<key>primary</key>
 			<true/>

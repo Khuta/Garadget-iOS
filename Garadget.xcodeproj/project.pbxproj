@@ -8,8 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		A3EEC3400750682925AD0BFA /* Pods_Garadget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA3306F5F1E58F9B76AEAA8 /* Pods_Garadget.framework */; };
+		DB0F378D1DFC17CD0005FBC3 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0F378C1DFC17CD0005FBC3 /* SettingsStoryboard.storyboard */; };
+		DB0F37911DFC18630005FBC3 /* VolpisSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F37901DFC18630005FBC3 /* VolpisSettingsViewController.swift */; };
+		DB0F37931DFC20390005FBC3 /* VolpisSettingsATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F37921DFC20390005FBC3 /* VolpisSettingsATableViewCell.swift */; };
+		DB0F37951DFC204B0005FBC3 /* VolpisSettingsBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F37941DFC204B0005FBC3 /* VolpisSettingsBTableViewCell.swift */; };
+		DB0F37971DFC27730005FBC3 /* VolpisSettingsCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F37961DFC27730005FBC3 /* VolpisSettingsCTableViewCell.swift */; };
+		DB0F37991DFC652D0005FBC3 /* VolpisDefaultSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F37981DFC652D0005FBC3 /* VolpisDefaultSettingsTableViewCell.swift */; };
+		DB0F379B1DFC91470005FBC3 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F379A1DFC91470005FBC3 /* SettingsData.swift */; };
+		DB33DF831DFA84E400CB8770 /* DoorConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33DF821DFA84E400CB8770 /* DoorConfigModel.swift */; };
+		DB33DF851DFA8E0800CB8770 /* DoorStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33DF841DFA8E0800CB8770 /* DoorStatusModel.swift */; };
+		DB33DF871DFA909B00CB8770 /* NetConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33DF861DFA909B00CB8770 /* NetConfigModel.swift */; };
+		DB33DF891DFA91CF00CB8770 /* DoorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33DF881DFA91CF00CB8770 /* DoorModel.swift */; };
+		DB33DF8C1DFA97D600CB8770 /* VolpisDoorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB33DF8B1DFA97D600CB8770 /* VolpisDoorCollectionViewCell.swift */; };
+		DB7ABF931DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7ABF921DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift */; };
+		DB7FFB101DFCA044007F7C57 /* VolpisDropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7FFB0F1DFCA044007F7C57 /* VolpisDropDownViewController.swift */; };
+		DB83AD7A1DF8B91500E2D2BE /* VolpisAllDorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83AD791DF8B91500E2D2BE /* VolpisAllDorsViewController.swift */; };
+		DB83AD7D1DF8BA3000E2D2BE /* InternalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */; };
+		DBA486931DFE0BBE00591381 /* VolpisAlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA486921DFE0BBE00591381 /* VolpisAlertsViewController.swift */; };
+		DBA486951DFE0C1700591381 /* AlertsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA486941DFE0C1700591381 /* AlertsStoryboard.storyboard */; };
+		DBA4869B1DFE7F3000591381 /* VolpisDefaultAlertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4869A1DFE7F3000591381 /* VolpisDefaultAlertsTableViewCell.swift */; };
+		DBA4869D1DFE7F5D00591381 /* VolpisAlertATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4869C1DFE7F5D00591381 /* VolpisAlertATableViewCell.swift */; };
+		DBA4869F1DFEACBD00591381 /* VolpisAlertBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4869E1DFEACBD00591381 /* VolpisAlertBTableViewCell.swift */; };
+		DBA486A11DFEB34600591381 /* AlertsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA486A01DFEB34600591381 /* AlertsData.swift */; };
+		DBA486A31DFEC7D800591381 /* DoorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA486A21DFEC7D800591381 /* DoorData.swift */; };
+		DBA7C9ED1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA7C9EC1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift */; };
 		DBD379C11DF818EA00C9A5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD379C01DF818EA00C9A5EA /* AppDelegate.swift */; };
-		DBD379C31DF818EA00C9A5EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD379C21DF818EA00C9A5EA /* ViewController.swift */; };
+		DBD379C31DF818EA00C9A5EA /* VolpisLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */; };
 		DBD379C61DF818EA00C9A5EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD379C41DF818EA00C9A5EA /* Main.storyboard */; };
 		DBD379C81DF818EA00C9A5EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD379C71DF818EA00C9A5EA /* Assets.xcassets */; };
 		DBD379CB1DF818EA00C9A5EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD379C91DF818EA00C9A5EA /* LaunchScreen.storyboard */; };
@@ -18,10 +42,35 @@
 /* Begin PBXFileReference section */
 		2CFA787A78702314E1ECB01E /* Pods-Garadget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garadget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Garadget/Pods-Garadget.release.xcconfig"; sourceTree = "<group>"; };
 		BA74E4C83B287C4036ABDD1C /* Pods-Garadget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Garadget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Garadget/Pods-Garadget.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0F378C1DFC17CD0005FBC3 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		DB0F37901DFC18630005FBC3 /* VolpisSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisSettingsViewController.swift; sourceTree = "<group>"; };
+		DB0F37921DFC20390005FBC3 /* VolpisSettingsATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisSettingsATableViewCell.swift; sourceTree = "<group>"; };
+		DB0F37941DFC204B0005FBC3 /* VolpisSettingsBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisSettingsBTableViewCell.swift; sourceTree = "<group>"; };
+		DB0F37961DFC27730005FBC3 /* VolpisSettingsCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisSettingsCTableViewCell.swift; sourceTree = "<group>"; };
+		DB0F37981DFC652D0005FBC3 /* VolpisDefaultSettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisDefaultSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		DB0F379A1DFC91470005FBC3 /* SettingsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
+		DB33DF821DFA84E400CB8770 /* DoorConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorConfigModel.swift; sourceTree = "<group>"; };
+		DB33DF841DFA8E0800CB8770 /* DoorStatusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorStatusModel.swift; sourceTree = "<group>"; };
+		DB33DF861DFA909B00CB8770 /* NetConfigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetConfigModel.swift; sourceTree = "<group>"; };
+		DB33DF881DFA91CF00CB8770 /* DoorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorModel.swift; sourceTree = "<group>"; };
+		DB33DF8B1DFA97D600CB8770 /* VolpisDoorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisDoorCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB7ABF921DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisLeftMenuViewController.swift; sourceTree = "<group>"; };
+		DB7FFB0F1DFCA044007F7C57 /* VolpisDropDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisDropDownViewController.swift; sourceTree = "<group>"; };
+		DB83AD791DF8B91500E2D2BE /* VolpisAllDorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisAllDorsViewController.swift; sourceTree = "<group>"; };
+		DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalHelper.swift; sourceTree = "<group>"; };
 		DBA3306F5F1E58F9B76AEAA8 /* Pods_Garadget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Garadget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA486921DFE0BBE00591381 /* VolpisAlertsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisAlertsViewController.swift; sourceTree = "<group>"; };
+		DBA486941DFE0C1700591381 /* AlertsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertsStoryboard.storyboard; sourceTree = "<group>"; };
+		DBA486961DFE7C3600591381 /* Garadget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Garadget.entitlements; sourceTree = "<group>"; };
+		DBA4869A1DFE7F3000591381 /* VolpisDefaultAlertsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisDefaultAlertsTableViewCell.swift; sourceTree = "<group>"; };
+		DBA4869C1DFE7F5D00591381 /* VolpisAlertATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisAlertATableViewCell.swift; sourceTree = "<group>"; };
+		DBA4869E1DFEACBD00591381 /* VolpisAlertBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisAlertBTableViewCell.swift; sourceTree = "<group>"; };
+		DBA486A01DFEB34600591381 /* AlertsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsData.swift; sourceTree = "<group>"; };
+		DBA486A21DFEC7D800591381 /* DoorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorData.swift; sourceTree = "<group>"; };
+		DBA7C9EC1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultGaradgetViewController.swift; sourceTree = "<group>"; };
 		DBD379BD1DF818EA00C9A5EA /* Garadget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garadget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD379C01DF818EA00C9A5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBD379C21DF818EA00C9A5EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolpisLoginViewController.swift; sourceTree = "<group>"; };
 		DBD379C51DF818EA00C9A5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBD379C71DF818EA00C9A5EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBD379CA1DF818EA00C9A5EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +106,90 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DB0F378E1DFC18260005FBC3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DB0F378F1DFC184B0005FBC3 /* Cells */,
+				DB0F37901DFC18630005FBC3 /* VolpisSettingsViewController.swift */,
+				DB7FFB0F1DFCA044007F7C57 /* VolpisDropDownViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		DB0F378F1DFC184B0005FBC3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB0F37921DFC20390005FBC3 /* VolpisSettingsATableViewCell.swift */,
+				DB0F37941DFC204B0005FBC3 /* VolpisSettingsBTableViewCell.swift */,
+				DB0F37961DFC27730005FBC3 /* VolpisSettingsCTableViewCell.swift */,
+				DB0F37981DFC652D0005FBC3 /* VolpisDefaultSettingsTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		DB33DF8A1DFA97AA00CB8770 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB33DF8B1DFA97D600CB8770 /* VolpisDoorCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		DB7ABF911DF8D12B0017AFBE /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DB7ABF921DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift */,
+			);
+			name = LeftMenu;
+			sourceTree = "<group>";
+		};
+		DB83AD781DF8B8FE00E2D2BE /* Dors */ = {
+			isa = PBXGroup;
+			children = (
+				DB33DF8A1DFA97AA00CB8770 /* Cells */,
+				DB83AD791DF8B91500E2D2BE /* VolpisAllDorsViewController.swift */,
+			);
+			name = Dors;
+			sourceTree = "<group>";
+		};
+		DB83AD7B1DF8BA0900E2D2BE /* InternalHelper */ = {
+			isa = PBXGroup;
+			children = (
+				DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */,
+				DB0F379A1DFC91470005FBC3 /* SettingsData.swift */,
+				DBA486A01DFEB34600591381 /* AlertsData.swift */,
+				DBA486A21DFEC7D800591381 /* DoorData.swift */,
+			);
+			name = InternalHelper;
+			sourceTree = "<group>";
+		};
+		DBA486911DFE0BA600591381 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				DBA486971DFE7D2600591381 /* Cells */,
+				DBA486921DFE0BBE00591381 /* VolpisAlertsViewController.swift */,
+			);
+			name = Alerts;
+			sourceTree = "<group>";
+		};
+		DBA486971DFE7D2600591381 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DBA4869A1DFE7F3000591381 /* VolpisDefaultAlertsTableViewCell.swift */,
+				DBA4869C1DFE7F5D00591381 /* VolpisAlertATableViewCell.swift */,
+				DBA4869E1DFEACBD00591381 /* VolpisAlertBTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		DBA7C9EB1DF8B4AF00BCAC46 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		DBD379B41DF818EA00C9A5EA = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +211,9 @@
 		DBD379BF1DF818EA00C9A5EA /* Garadget */ = {
 			isa = PBXGroup;
 			children = (
+				DBA486961DFE7C3600591381 /* Garadget.entitlements */,
 				DBD379D51DF81A8F00C9A5EA /* Default */,
+				DB83AD7B1DF8BA0900E2D2BE /* InternalHelper */,
 				DBD379D21DF81A6100C9A5EA /* Models */,
 				DBD379D31DF81A6700C9A5EA /* Views */,
 				DBD379D41DF81A7100C9A5EA /* Controllers */,
@@ -89,6 +224,10 @@
 		DBD379D21DF81A6100C9A5EA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DB33DF821DFA84E400CB8770 /* DoorConfigModel.swift */,
+				DB33DF841DFA8E0800CB8770 /* DoorStatusModel.swift */,
+				DB33DF861DFA909B00CB8770 /* NetConfigModel.swift */,
+				DB33DF881DFA91CF00CB8770 /* DoorModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -97,6 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				DBD379C41DF818EA00C9A5EA /* Main.storyboard */,
+				DB0F378C1DFC17CD0005FBC3 /* SettingsStoryboard.storyboard */,
+				DBA486941DFE0C1700591381 /* AlertsStoryboard.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -104,7 +245,12 @@
 		DBD379D41DF81A7100C9A5EA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DBD379C21DF818EA00C9A5EA /* ViewController.swift */,
+				DBA7C9EC1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift */,
+				DB7ABF911DF8D12B0017AFBE /* LeftMenu */,
+				DBA7C9EB1DF8B4AF00BCAC46 /* Login */,
+				DB83AD781DF8B8FE00E2D2BE /* Dors */,
+				DB0F378E1DFC18260005FBC3 /* Settings */,
+				DBA486911DFE0BA600591381 /* Alerts */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -157,6 +303,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 53SEES3SQP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -183,8 +334,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA486951DFE0C1700591381 /* AlertsStoryboard.storyboard in Resources */,
 				DBD379CB1DF818EA00C9A5EA /* LaunchScreen.storyboard in Resources */,
 				DBD379C81DF818EA00C9A5EA /* Assets.xcassets in Resources */,
+				DB0F378D1DFC17CD0005FBC3 /* SettingsStoryboard.storyboard in Resources */,
 				DBD379C61DF818EA00C9A5EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,8 +397,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBD379C31DF818EA00C9A5EA /* ViewController.swift in Sources */,
+				DBD379C31DF818EA00C9A5EA /* VolpisLoginViewController.swift in Sources */,
+				DB33DF891DFA91CF00CB8770 /* DoorModel.swift in Sources */,
+				DBA4869F1DFEACBD00591381 /* VolpisAlertBTableViewCell.swift in Sources */,
+				DB0F37971DFC27730005FBC3 /* VolpisSettingsCTableViewCell.swift in Sources */,
+				DB33DF851DFA8E0800CB8770 /* DoorStatusModel.swift in Sources */,
+				DB83AD7D1DF8BA3000E2D2BE /* InternalHelper.swift in Sources */,
+				DBA7C9ED1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift in Sources */,
+				DBA486931DFE0BBE00591381 /* VolpisAlertsViewController.swift in Sources */,
 				DBD379C11DF818EA00C9A5EA /* AppDelegate.swift in Sources */,
+				DB0F37951DFC204B0005FBC3 /* VolpisSettingsBTableViewCell.swift in Sources */,
+				DB0F379B1DFC91470005FBC3 /* SettingsData.swift in Sources */,
+				DB83AD7A1DF8B91500E2D2BE /* VolpisAllDorsViewController.swift in Sources */,
+				DB0F37991DFC652D0005FBC3 /* VolpisDefaultSettingsTableViewCell.swift in Sources */,
+				DB33DF831DFA84E400CB8770 /* DoorConfigModel.swift in Sources */,
+				DBA4869B1DFE7F3000591381 /* VolpisDefaultAlertsTableViewCell.swift in Sources */,
+				DB7FFB101DFCA044007F7C57 /* VolpisDropDownViewController.swift in Sources */,
+				DBA4869D1DFE7F5D00591381 /* VolpisAlertATableViewCell.swift in Sources */,
+				DBA486A11DFEB34600591381 /* AlertsData.swift in Sources */,
+				DB0F37931DFC20390005FBC3 /* VolpisSettingsATableViewCell.swift in Sources */,
+				DB33DF8C1DFA97D600CB8770 /* VolpisDoorCollectionViewCell.swift in Sources */,
+				DB33DF871DFA909B00CB8770 /* NetConfigModel.swift in Sources */,
+				DB0F37911DFC18630005FBC3 /* VolpisSettingsViewController.swift in Sources */,
+				DB7ABF931DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift in Sources */,
+				DBA486A31DFEC7D800591381 /* DoorData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,13 +544,15 @@
 			baseConfigurationReference = BA74E4C83B287C4036ABDD1C /* Pods-Garadget.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Garadget/Garadget.entitlements;
 				DEVELOPMENT_TEAM = 53SEES3SQP;
 				INFOPLIST_FILE = Garadget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.volpis.garadget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -384,13 +561,15 @@
 			baseConfigurationReference = 2CFA787A78702314E1ECB01E /* Pods-Garadget.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Garadget/Garadget.entitlements;
 				DEVELOPMENT_TEAM = 53SEES3SQP;
 				INFOPLIST_FILE = Garadget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.volpis.garadget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

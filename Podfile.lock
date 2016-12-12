@@ -1,3 +1,62 @@
-PODFILE CHECKSUM: d1e9f773c62e3cfe1ae11d5d0d64995d24ba81f0
+PODS:
+  - 1PasswordExtension (1.8.4)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Keys (1.0.0)
+  - MBProgressHUD (1.0.0)
+  - Spark-SDK (0.5.1):
+    - Spark-SDK/Helpers (= 0.5.1)
+    - Spark-SDK/SDK (= 0.5.1)
+  - Spark-SDK/Helpers (0.5.1)
+  - Spark-SDK/SDK (0.5.1):
+    - AFNetworking (~> 3.0)
+    - Spark-SDK/Helpers
+  - SparkSetup (0.6.1):
+    - SparkSetup/Comm (= 0.6.1)
+    - SparkSetup/Core (= 0.6.1)
+  - SparkSetup/Comm (0.6.1)
+  - SparkSetup/Core (0.6.1):
+    - 1PasswordExtension
+    - Spark-SDK
+    - SparkSetup/Comm
+  - SWRevealViewController (2.3.0)
+  - UICircularProgressRing (1.1.1)
 
-COCOAPODS: 1.1.0.rc.2
+DEPENDENCIES:
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - MBProgressHUD (~> 1.0.0)
+  - Spark-SDK
+  - SparkSetup
+  - SWRevealViewController (~> 2.3.0)
+  - UICircularProgressRing (~> 1.1.1)
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+SPEC CHECKSUMS:
+  1PasswordExtension: e775a29310c65851e5a6cec1afc349ab4e334e47
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Spark-SDK: 361c1d3aabc88f7c1eada27427cc8997f5a79ac1
+  SparkSetup: 0e63d1cce0c16278b798f383f1ece034032df6a7
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+  UICircularProgressRing: c37697577b2f07841fa901ad162959f6f5530204
+
+PODFILE CHECKSUM: 808db5045f967576134f97c906aa5296978ef28c
+
+COCOAPODS: 1.1.1
