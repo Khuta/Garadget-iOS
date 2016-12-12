@@ -17,6 +17,7 @@ class VolpisSettingsViewController: UIViewController {
     
     var currentDoor: DoorModel = DoorModel()
     var settings: [[[String:AnyObject]]] = [[[String:AnyObject]]]()
+    var currentNewName: String = ""
     
     var dropDowbVC: VolpisDropDownViewController = VolpisDropDownViewController()
     
@@ -120,6 +121,24 @@ class VolpisSettingsViewController: UIViewController {
             self.dropDowbVC.removeFromParentViewController()
         }
     }
+    
+    func didRenameDevice() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        SparkCloud.sharedInstance().getDevice(self.currentDoor.device.id) { (device, error) in
+            if error == nil {
+                device?.rename(self.currentNewName, completion: { (error) in
+                    if error == nil {
+                        device?.callFunction(InternalHelper.CallbackFunctions.updateConfig.rawValue, withArguments: ["nme=\(self.currentNewName)"], completion: { (resultCode, error) in
+                            if error == nil {
+                                self.currentDoor.updateDoorData(value: "nme=\(self.currentNewName)")
+                                MBProgressHUD.hideAllHUDs(for: self.view, animated: true)
+                            }
+                        })
+                    }
+                })
+            }
+        }
+    }
 
     // MARK: - Navigation
     func back(sender: UIBarButtonItem) {
@@ -127,6 +146,7 @@ class VolpisSettingsViewController: UIViewController {
         
         for aViewController in viewControllers {
             if(aViewController is VolpisAllDorsViewController) {
+                self.didRenameDevice()
                 let destinationVC = aViewController as! VolpisAllDorsViewController
                 destinationVC.needUpdateData = true
                 destinationVC.selectedDoor = self.currentDoor
@@ -204,21 +224,8 @@ extension VolpisSettingsViewController: SettingsCellProtocol {
     }
     
     func didAskForNameChanging(newNameValue: String) {
-        MBProgressHUD.showAdded(to: self.view, animated: true)
-        SparkCloud.sharedInstance().getDevice(self.currentDoor.device.id) { (device, error) in
-            if error == nil {
-                device?.rename(newNameValue, completion: { (error) in
-                    if error == nil {
-                        device?.callFunction(InternalHelper.CallbackFunctions.updateConfig.rawValue, withArguments: ["nme=\(newNameValue)"], completion: { (resultCode, error) in
-                            if error == nil {
-                                self.currentDoor.updateDoorData(value: "nme=\(newNameValue)")
-                                MBProgressHUD.hide(for: self.view, animated: true)
-                            }
-                        })
-                    }
-                })
-            }
-        }
+        self.currentNewName = newNameValue
+        self.didRenameDevice()
     }
 }
 
