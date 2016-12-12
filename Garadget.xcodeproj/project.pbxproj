@@ -24,6 +24,13 @@
 		DB7FFB101DFCA044007F7C57 /* VolpisDropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7FFB0F1DFCA044007F7C57 /* VolpisDropDownViewController.swift */; };
 		DB83AD7A1DF8B91500E2D2BE /* VolpisAllDorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83AD791DF8B91500E2D2BE /* VolpisAllDorsViewController.swift */; };
 		DB83AD7D1DF8BA3000E2D2BE /* InternalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */; };
+		DBA486931DFE0BBE00591381 /* VolpisAlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA486921DFE0BBE00591381 /* VolpisAlertsViewController.swift */; };
+		DBA486951DFE0C1700591381 /* AlertsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA486941DFE0C1700591381 /* AlertsStoryboard.storyboard */; };
+		DBA4869B1DFE7F3000591381 /* VolpisDefaultAlertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4869A1DFE7F3000591381 /* VolpisDefaultAlertsTableViewCell.swift */; };
+		DBA4869D1DFE7F5D00591381 /* VolpisAlertATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4869C1DFE7F5D00591381 /* VolpisAlertATableViewCell.swift */; };
+		DBA4869F1DFEACBD00591381 /* VolpisAlertBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA4869E1DFEACBD00591381 /* VolpisAlertBTableViewCell.swift */; };
+		DBA486A11DFEB34600591381 /* AlertsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA486A01DFEB34600591381 /* AlertsData.swift */; };
+		DBA486A31DFEC7D800591381 /* DoorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA486A21DFEC7D800591381 /* DoorData.swift */; };
 		DBA7C9ED1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA7C9EC1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift */; };
 		DBD379C11DF818EA00C9A5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD379C01DF818EA00C9A5EA /* AppDelegate.swift */; };
 		DBD379C31DF818EA00C9A5EA /* VolpisLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD379C21DF818EA00C9A5EA /* VolpisLoginViewController.swift */; };
@@ -52,6 +59,14 @@
 		DB83AD791DF8B91500E2D2BE /* VolpisAllDorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisAllDorsViewController.swift; sourceTree = "<group>"; };
 		DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternalHelper.swift; sourceTree = "<group>"; };
 		DBA3306F5F1E58F9B76AEAA8 /* Pods_Garadget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Garadget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA486921DFE0BBE00591381 /* VolpisAlertsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisAlertsViewController.swift; sourceTree = "<group>"; };
+		DBA486941DFE0C1700591381 /* AlertsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertsStoryboard.storyboard; sourceTree = "<group>"; };
+		DBA486961DFE7C3600591381 /* Garadget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Garadget.entitlements; sourceTree = "<group>"; };
+		DBA4869A1DFE7F3000591381 /* VolpisDefaultAlertsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisDefaultAlertsTableViewCell.swift; sourceTree = "<group>"; };
+		DBA4869C1DFE7F5D00591381 /* VolpisAlertATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisAlertATableViewCell.swift; sourceTree = "<group>"; };
+		DBA4869E1DFEACBD00591381 /* VolpisAlertBTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolpisAlertBTableViewCell.swift; sourceTree = "<group>"; };
+		DBA486A01DFEB34600591381 /* AlertsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsData.swift; sourceTree = "<group>"; };
+		DBA486A21DFEC7D800591381 /* DoorData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorData.swift; sourceTree = "<group>"; };
 		DBA7C9EC1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultGaradgetViewController.swift; sourceTree = "<group>"; };
 		DBD379BD1DF818EA00C9A5EA /* Garadget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Garadget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD379C01DF818EA00C9A5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,8 +157,29 @@
 			children = (
 				DB83AD7C1DF8BA3000E2D2BE /* InternalHelper.swift */,
 				DB0F379A1DFC91470005FBC3 /* SettingsData.swift */,
+				DBA486A01DFEB34600591381 /* AlertsData.swift */,
+				DBA486A21DFEC7D800591381 /* DoorData.swift */,
 			);
 			name = InternalHelper;
+			sourceTree = "<group>";
+		};
+		DBA486911DFE0BA600591381 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				DBA486971DFE7D2600591381 /* Cells */,
+				DBA486921DFE0BBE00591381 /* VolpisAlertsViewController.swift */,
+			);
+			name = Alerts;
+			sourceTree = "<group>";
+		};
+		DBA486971DFE7D2600591381 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DBA4869A1DFE7F3000591381 /* VolpisDefaultAlertsTableViewCell.swift */,
+				DBA4869C1DFE7F5D00591381 /* VolpisAlertATableViewCell.swift */,
+				DBA4869E1DFEACBD00591381 /* VolpisAlertBTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		DBA7C9EB1DF8B4AF00BCAC46 /* Login */ = {
@@ -175,8 +211,9 @@
 		DBD379BF1DF818EA00C9A5EA /* Garadget */ = {
 			isa = PBXGroup;
 			children = (
-				DB83AD7B1DF8BA0900E2D2BE /* InternalHelper */,
+				DBA486961DFE7C3600591381 /* Garadget.entitlements */,
 				DBD379D51DF81A8F00C9A5EA /* Default */,
+				DB83AD7B1DF8BA0900E2D2BE /* InternalHelper */,
 				DBD379D21DF81A6100C9A5EA /* Models */,
 				DBD379D31DF81A6700C9A5EA /* Views */,
 				DBD379D41DF81A7100C9A5EA /* Controllers */,
@@ -200,6 +237,7 @@
 			children = (
 				DBD379C41DF818EA00C9A5EA /* Main.storyboard */,
 				DB0F378C1DFC17CD0005FBC3 /* SettingsStoryboard.storyboard */,
+				DBA486941DFE0C1700591381 /* AlertsStoryboard.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -212,6 +250,7 @@
 				DBA7C9EB1DF8B4AF00BCAC46 /* Login */,
 				DB83AD781DF8B8FE00E2D2BE /* Dors */,
 				DB0F378E1DFC18260005FBC3 /* Settings */,
+				DBA486911DFE0BA600591381 /* Alerts */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +303,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 53SEES3SQP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -290,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA486951DFE0C1700591381 /* AlertsStoryboard.storyboard in Resources */,
 				DBD379CB1DF818EA00C9A5EA /* LaunchScreen.storyboard in Resources */,
 				DBD379C81DF818EA00C9A5EA /* Assets.xcassets in Resources */,
 				DB0F378D1DFC17CD0005FBC3 /* SettingsStoryboard.storyboard in Resources */,
@@ -354,22 +399,28 @@
 			files = (
 				DBD379C31DF818EA00C9A5EA /* VolpisLoginViewController.swift in Sources */,
 				DB33DF891DFA91CF00CB8770 /* DoorModel.swift in Sources */,
+				DBA4869F1DFEACBD00591381 /* VolpisAlertBTableViewCell.swift in Sources */,
 				DB0F37971DFC27730005FBC3 /* VolpisSettingsCTableViewCell.swift in Sources */,
 				DB33DF851DFA8E0800CB8770 /* DoorStatusModel.swift in Sources */,
 				DB83AD7D1DF8BA3000E2D2BE /* InternalHelper.swift in Sources */,
 				DBA7C9ED1DF8B50600BCAC46 /* DefaultGaradgetViewController.swift in Sources */,
+				DBA486931DFE0BBE00591381 /* VolpisAlertsViewController.swift in Sources */,
 				DBD379C11DF818EA00C9A5EA /* AppDelegate.swift in Sources */,
 				DB0F37951DFC204B0005FBC3 /* VolpisSettingsBTableViewCell.swift in Sources */,
 				DB0F379B1DFC91470005FBC3 /* SettingsData.swift in Sources */,
 				DB83AD7A1DF8B91500E2D2BE /* VolpisAllDorsViewController.swift in Sources */,
 				DB0F37991DFC652D0005FBC3 /* VolpisDefaultSettingsTableViewCell.swift in Sources */,
 				DB33DF831DFA84E400CB8770 /* DoorConfigModel.swift in Sources */,
+				DBA4869B1DFE7F3000591381 /* VolpisDefaultAlertsTableViewCell.swift in Sources */,
 				DB7FFB101DFCA044007F7C57 /* VolpisDropDownViewController.swift in Sources */,
+				DBA4869D1DFE7F5D00591381 /* VolpisAlertATableViewCell.swift in Sources */,
+				DBA486A11DFEB34600591381 /* AlertsData.swift in Sources */,
 				DB0F37931DFC20390005FBC3 /* VolpisSettingsATableViewCell.swift in Sources */,
 				DB33DF8C1DFA97D600CB8770 /* VolpisDoorCollectionViewCell.swift in Sources */,
 				DB33DF871DFA909B00CB8770 /* NetConfigModel.swift in Sources */,
 				DB0F37911DFC18630005FBC3 /* VolpisSettingsViewController.swift in Sources */,
 				DB7ABF931DF8D14A0017AFBE /* VolpisLeftMenuViewController.swift in Sources */,
+				DBA486A31DFEC7D800591381 /* DoorData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +544,7 @@
 			baseConfigurationReference = BA74E4C83B287C4036ABDD1C /* Pods-Garadget.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Garadget/Garadget.entitlements;
 				DEVELOPMENT_TEAM = 53SEES3SQP;
 				INFOPLIST_FILE = Garadget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -509,6 +561,7 @@
 			baseConfigurationReference = 2CFA787A78702314E1ECB01E /* Pods-Garadget.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Garadget/Garadget.entitlements;
 				DEVELOPMENT_TEAM = 53SEES3SQP;
 				INFOPLIST_FILE = Garadget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

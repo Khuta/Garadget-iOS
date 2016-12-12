@@ -186,16 +186,26 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LG-aK-kWu">
+                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="64"/>
+                                                <connections>
+                                                    <action selector="didPressAlertsButton:" destination="Bg4-QF-MNM" eventType="touchUpInside" id="ZOO-Yh-glK"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="R0m-Y6-nWZ" secondAttribute="trailing" id="6R4-D3-IL9"/>
                                             <constraint firstItem="R0m-Y6-nWZ" firstAttribute="leading" secondItem="Su9-NB-0r8" secondAttribute="leading" id="Enc-Tm-3Yh"/>
+                                            <constraint firstAttribute="trailing" secondItem="9LG-aK-kWu" secondAttribute="trailing" id="Ere-sy-YjM"/>
                                             <constraint firstItem="R0m-Y6-nWZ" firstAttribute="top" secondItem="Nun-Fn-TIJ" secondAttribute="bottom" constant="5" id="FI3-E1-IVV"/>
                                             <constraint firstItem="Nun-Fn-TIJ" firstAttribute="top" secondItem="Su9-NB-0r8" secondAttribute="top" constant="10" id="MGP-44-UDR"/>
                                             <constraint firstAttribute="bottom" secondItem="R0m-Y6-nWZ" secondAttribute="bottom" constant="5" id="h1c-z4-HoJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="9LG-aK-kWu" secondAttribute="bottom" id="kvE-N2-egh"/>
+                                            <constraint firstItem="9LG-aK-kWu" firstAttribute="leading" secondItem="Su9-NB-0r8" secondAttribute="leading" id="llU-aK-FNP"/>
                                             <constraint firstAttribute="trailing" secondItem="Nun-Fn-TIJ" secondAttribute="trailing" id="mYM-fZ-nuz"/>
                                             <constraint firstItem="Nun-Fn-TIJ" firstAttribute="leading" secondItem="Su9-NB-0r8" secondAttribute="leading" id="xL7-Cj-mgb"/>
+                                            <constraint firstItem="9LG-aK-kWu" firstAttribute="top" secondItem="Su9-NB-0r8" secondAttribute="top" id="zsO-D6-3D6"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHp-nv-pug">
@@ -213,16 +223,26 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V26-3a-htY">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="64"/>
+                                                <connections>
+                                                    <action selector="didPressAddDoorButton:" destination="Bg4-QF-MNM" eventType="touchUpInside" id="ksk-kw-o9g"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="V26-3a-htY" secondAttribute="trailing" id="72N-qY-fRf"/>
+                                            <constraint firstItem="V26-3a-htY" firstAttribute="top" secondItem="fHp-nv-pug" secondAttribute="top" id="K6E-yM-mbH"/>
                                             <constraint firstItem="gEa-9r-NnI" firstAttribute="top" secondItem="XeL-4I-jkG" secondAttribute="bottom" constant="5" id="LTB-6L-HNF"/>
                                             <constraint firstAttribute="bottom" secondItem="gEa-9r-NnI" secondAttribute="bottom" constant="5" id="PAW-kS-oYh"/>
                                             <constraint firstItem="XeL-4I-jkG" firstAttribute="top" secondItem="fHp-nv-pug" secondAttribute="top" constant="10" id="S2D-pD-1cW"/>
+                                            <constraint firstItem="V26-3a-htY" firstAttribute="leading" secondItem="fHp-nv-pug" secondAttribute="leading" id="aDC-u5-q3J"/>
                                             <constraint firstItem="XeL-4I-jkG" firstAttribute="leading" secondItem="fHp-nv-pug" secondAttribute="leading" id="eUr-bL-DcM"/>
                                             <constraint firstAttribute="trailing" secondItem="XeL-4I-jkG" secondAttribute="trailing" id="hnl-aj-aYA"/>
                                             <constraint firstItem="gEa-9r-NnI" firstAttribute="leading" secondItem="fHp-nv-pug" secondAttribute="leading" id="q4W-O8-UnP"/>
                                             <constraint firstAttribute="trailing" secondItem="gEa-9r-NnI" secondAttribute="trailing" id="uQt-gG-QP5"/>
+                                            <constraint firstAttribute="bottom" secondItem="V26-3a-htY" secondAttribute="bottom" id="vXm-WA-kAI"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gen-fv-n2L">
@@ -288,7 +308,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DoorCell" id="FCS-qo-o7h" customClass="VolpisDoorCollectionViewCell" customModule="Garadget" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="3.5" width="100" height="127"/>
+                                                <rect key="frame" x="0.0" y="3" width="100" height="127"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="127"/>
@@ -518,6 +538,7 @@
                         <outlet property="statusImageView" destination="WfI-Jl-rJF" id="2kL-VA-2KJ"/>
                         <outlet property="timeLabel" destination="eyW-P6-v7S" id="hSd-Nj-cse"/>
                         <segue destination="Rgg-9M-d1X" kind="show" identifier="FromAllDoorsToSettings" id="XvV-PP-6F1"/>
+                        <segue destination="ApF-OM-1XE" kind="show" identifier="FromAllDoorsToAlerts" id="Kt5-Dl-NzF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUP-Pt-K9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -531,6 +552,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Vq-vq-JRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2422" y="1312"/>
+        </scene>
+        <!--AlertsStoryboard-->
+        <scene sceneID="qon-4x-7SX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AlertsStoryboard" id="ApF-OM-1XE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iqw-PE-z3P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2410" y="1370"/>
         </scene>
     </scenes>
     <resources>

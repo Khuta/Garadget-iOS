@@ -32,7 +32,7 @@ class VolpisSettingsViewController: UIViewController {
     
     func prepareData() {
         var tempArr: [[String:AnyObject]] = [[String:AnyObject]]()
-        
+        self.settings.removeAll()
         //Device->id
         tempArr.append(self.didCreateCellItem(key: "ID", value: self.currentDoor.device.id as AnyObject, subValues: "" as AnyObject, cellType: .cellA, particleKey: ""))
         //Device->name
@@ -70,20 +70,20 @@ class VolpisSettingsViewController: UIViewController {
             //Sensor->reflection
             tempArr.append(self.didCreateCellItem(key: "Reflection", value: self.currentDoor.doorStatus.reflectionRate as AnyObject, subValues: "" as AnyObject, cellType: .cellA, particleKey: ""))
             //Sensor->scan period
-            tempArr.append(self.didCreateCellItem(key: "Scan Period", value: SettingsData().getNormalValueInArr(by: self.currentDoor.doorConfig.sensorScanInterval as AnyObject, and: SettingsData().scanPeriods) as AnyObject, subValues: SettingsData().scanPeriods as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.rdt.rawValue))
+            tempArr.append(self.didCreateCellItem(key: "Scan Period", value: InternalHelper().getNormalValueInArr(by: self.currentDoor.doorConfig.sensorScanInterval as AnyObject, and: SettingsData().scanPeriods) as AnyObject, subValues: SettingsData().scanPeriods as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.rdt.rawValue))
             //Sensor->sensor reads
-            tempArr.append(self.didCreateCellItem(key: "Sensor Reads", value: SettingsData().getNormalValueInArr(by: self.currentDoor.doorConfig.sensorReadsAmount as AnyObject, and: SettingsData().sensorReads) as AnyObject, subValues: SettingsData().sensorReads as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.srr.rawValue))
+            tempArr.append(self.didCreateCellItem(key: "Sensor Reads", value: InternalHelper().getNormalValueInArr(by: self.currentDoor.doorConfig.sensorReadsAmount as AnyObject, and: SettingsData().sensorReads) as AnyObject, subValues: SettingsData().sensorReads as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.srr.rawValue))
             //Sensor->sensor threshold
-            tempArr.append(self.didCreateCellItem(key: "Sensor Threshold", value: SettingsData().getNormalValueInArr(by: self.currentDoor.doorConfig.reflectionThreshold as AnyObject, and: SettingsData().sensorThresholds) as AnyObject, subValues: SettingsData().sensorThresholds as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.srt.rawValue))
+            tempArr.append(self.didCreateCellItem(key: "Sensor Threshold", value: InternalHelper().getNormalValueInArr(by: self.currentDoor.doorConfig.reflectionThreshold as AnyObject, and: SettingsData().sensorThresholds) as AnyObject, subValues: SettingsData().sensorThresholds as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.srt.rawValue))
             self.settings.append(tempArr)
             
             tempArr.removeAll()
             //Door->door motion time
-            tempArr.append(self.didCreateCellItem(key: "Door Motion Time", value: SettingsData().getNormalValueInArr(by: self.currentDoor.doorConfig.doorMovingTime as AnyObject, and: SettingsData().doorMotionTimes) as AnyObject, subValues: SettingsData().doorMotionTimes as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.mtt.rawValue))
+            tempArr.append(self.didCreateCellItem(key: "Door Motion Time", value: InternalHelper().getNormalValueInArr(by: self.currentDoor.doorConfig.doorMovingTime as AnyObject, and: SettingsData().doorMotionTimes) as AnyObject, subValues: SettingsData().doorMotionTimes as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.mtt.rawValue))
             //Door->relay on time
-            tempArr.append(self.didCreateCellItem(key: "Relay On Time", value: SettingsData().getNormalValueInArr(by: self.currentDoor.doorConfig.buttonPressTime as AnyObject, and: SettingsData().relayOnTimes) as AnyObject, subValues: SettingsData().relayOnTimes as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.rlt.rawValue))
+            tempArr.append(self.didCreateCellItem(key: "Relay On Time", value: InternalHelper().getNormalValueInArr(by: self.currentDoor.doorConfig.buttonPressTime as AnyObject, and: SettingsData().relayOnTimes) as AnyObject, subValues: SettingsData().relayOnTimes as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.rlt.rawValue))
             //Door->relay off time
-            tempArr.append(self.didCreateCellItem(key: "Relay Off Time", value: SettingsData().getNormalValueInArr(by: self.currentDoor.doorConfig.buttonPressesDelay as AnyObject, and: SettingsData().relayOffTimes) as AnyObject, subValues: SettingsData().relayOffTimes as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.rlp.rawValue))
+            tempArr.append(self.didCreateCellItem(key: "Relay Off Time", value: InternalHelper().getNormalValueInArr(by: self.currentDoor.doorConfig.buttonPressesDelay as AnyObject, and: SettingsData().relayOffTimes) as AnyObject, subValues: SettingsData().relayOffTimes as AnyObject, cellType: .cellC, particleKey: DoorConfigModel.DoorConfigVariables.rlp.rawValue))
             self.settings.append(tempArr)
         } else {
             self.settings.append(tempArr)
@@ -179,6 +179,22 @@ extension VolpisSettingsViewController: SettingsCellProtocol {
         }) { (success) in
         }
     }
+    
+    func didAskForNameChanging(newNameValue: String) {
+        SparkCloud.sharedInstance().getDevice(self.currentDoor.device.id) { (device, error) in
+            if error == nil {
+                device?.rename(newNameValue, completion: { (error) in
+                    if error == nil {
+                        device?.callFunction("setConfig", withArguments: ["nme=\(newNameValue)"], completion: { (resultCode, error) in
+                            if error == nil {
+                                self.currentDoor.updateDoorData(value: "nme=\(newNameValue)")
+                            }
+                        })
+                    }
+                })
+            }
+        }
+    }
 }
 
 extension VolpisSettingsViewController: DropDownProtocol {
@@ -190,7 +206,8 @@ extension VolpisSettingsViewController: DropDownProtocol {
             if error == nil {
                 device?.callFunction("setConfig", withArguments: funcArgs, completion: { (resultCode, error) in
                     if error == nil {
-                        
+                        self.currentDoor.updateDoorData(value: value)
+                        self.prepareData()
                     }
                 })
             }

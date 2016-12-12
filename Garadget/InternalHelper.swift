@@ -11,6 +11,11 @@ import Foundation
 
 class InternalHelper {
     
+    enum AlertCellIdentifiers: String {
+        case cellAIdentifier = "AlertCellTypeA"
+        case cellBIdentifier = "AlertCellTypeB"
+    }
+    
     enum SettigCellIdentifiers: String {
         case cellAIdentifier = "SettingsCellTypeA"
         case cellBIdentifier = "SettingsCellTypeB"
@@ -51,6 +56,7 @@ class InternalHelper {
     enum StoryboardType {
         case main
         case settings
+        case alerts
         
         /*
          Function that based on the storyboard type returns an instance of the storyboard file
@@ -61,6 +67,8 @@ class InternalHelper {
                 return UIStoryboard(name: "Main", bundle: nil)
             case.settings:
                 return UIStoryboard(name: "SettingsStoryboard", bundle: nil)
+            case .alerts:
+                return UIStoryboard(name: "AlertsStoryboard", bundle: nil)
             }
         }
         
@@ -81,6 +89,25 @@ class InternalHelper {
         default:
             return SettigCellIdentifiers.cellCIdentifier.rawValue
         }
+    }
+    
+    func getAlertsCellIdentifier(by type: VolpisAlertsViewController.CellTypes) -> String {
+        switch type {
+        case .cellA:
+            return AlertCellIdentifiers.cellAIdentifier.rawValue
+        case .cellB:
+            return AlertCellIdentifiers.cellBIdentifier.rawValue
+        }
+    }
+    
+    func getNormalValueInArr(by str: AnyObject, and arr: [String]) -> String {
+        for item in arr {
+            let newArr = item.components(separatedBy: "|")
+            if newArr[1] == "\(str)" {
+                return newArr[0]
+            }
+        }
+        return ""
     }
     
 }

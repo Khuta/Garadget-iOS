@@ -38,7 +38,7 @@ class VolpisLoginViewController: UIViewController {
             customizationVC?.brandName = "Garadget"
             customizationVC?.brandImage = UIImage(named: "header_icon_black")
             customizationVC?.brandImageBackgroundColor = UIColor.white
-            
+            customizationVC?.elementBackgroundColor = UIColor(colorLiteralRed: 0.0/255.0, green: 102.0/255.0, blue: 1.0/255.0, alpha: 1.0)
             setupController.delegate = self
             self.present(setupController, animated: true, completion: nil)
         }

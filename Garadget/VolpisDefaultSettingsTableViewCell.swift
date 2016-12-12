@@ -10,6 +10,7 @@ import UIKit
 
 protocol SettingsCellProtocol {
     func didAskForDataPicker(for indexPath: IndexPath)
+    func didAskForNameChanging(newNameValue: String)
 }
 
 class VolpisDefaultSettingsTableViewCell: UITableViewCell {

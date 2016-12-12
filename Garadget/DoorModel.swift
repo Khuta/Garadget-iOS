@@ -43,6 +43,8 @@ class DoorModel: NSObject {
     func getDoorImage() -> UIImage {
         if self.doorStatus.status == InternalHelper.DoorStatusConstants.open.rawValue {
             return UIImage(named: "ic_anim_garage_15")!
+        } else if self.doorStatus.status == InternalHelper.DoorStatusConstants.stopped.rawValue {
+            return UIImage(named: "ic_anim_garage_09")!
         } else {
             return UIImage(named: "ic_anim_garage_01")!
         }
@@ -81,6 +83,35 @@ class DoorModel: NSObject {
             return "\(Int(time / 1000 / 60 / 60 / 24)) d"
         }
         
+    }
+    
+    func updateDoorData(value: String) {
+        let ketValueArr = value.components(separatedBy: "=")
+        
+        switch ketValueArr[0] {
+        case DoorConfigModel.DoorConfigVariables.rlp.rawValue:
+            self.doorConfig.buttonPressesDelay =  Int(ketValueArr[1])!
+        case DoorConfigModel.DoorConfigVariables.rlt.rawValue:
+            self.doorConfig.buttonPressTime =  Int(ketValueArr[1])!
+        case DoorConfigModel.DoorConfigVariables.mtt.rawValue:
+            self.doorConfig.doorMovingTime =  Int(ketValueArr[1])!
+        case DoorConfigModel.DoorConfigVariables.srt.rawValue:
+            self.doorConfig.reflectionThreshold =  Int(ketValueArr[1])!
+        case DoorConfigModel.DoorConfigVariables.srr.rawValue:
+            self.doorConfig.sensorReadsAmount =  Int(ketValueArr[1])!
+        case DoorConfigModel.DoorConfigVariables.rdt.rawValue:
+            self.doorConfig.sensorScanInterval =  Int(ketValueArr[1])!
+        case DoorConfigModel.DoorConfigVariables.aot.rawValue:
+            self.doorConfig.openTimeout =  Int(ketValueArr[1])!
+        case DoorConfigModel.DoorConfigVariables.aev.rawValue:
+            self.doorConfig.statusAlerts =  Int(ketValueArr[1])!
+        case DoorConfigModel.DoorConfigVariables.nme.rawValue:
+            self.doorConfig.name =  ketValueArr[1]
+        case DoorStatusModel.DoorStatusVariables.status.rawValue:
+            self.doorStatus.status =  ketValueArr[1]
+        default:
+            break
+        }
     }
     
 }
