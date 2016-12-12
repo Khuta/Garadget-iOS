@@ -15,8 +15,6 @@ class VolpisLoginViewController: UIViewController {
     
     let setupController = SparkSetupMainController()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,7 +25,6 @@ class VolpisLoginViewController: UIViewController {
             self.didLoadSparkVC()
         }
     }
-    
     
     // MARK: - Load spark vc
     func didLoadSparkVC() {
@@ -43,7 +40,6 @@ class VolpisLoginViewController: UIViewController {
             self.present(setupController, animated: true, completion: nil)
         }
     }
-
 }
 
 extension VolpisLoginViewController: SparkSetupMainControllerDelegate {
@@ -53,9 +49,7 @@ extension VolpisLoginViewController: SparkSetupMainControllerDelegate {
     
     func sparkSetupViewController(_ controller: SparkSetupMainController!, didFinishWith result: SparkSetupMainControllerResult, device: SparkDevice!) {
         controller.delegate = nil
-        
         let swRevealVC = InternalHelper.StoryboardType.main.getStoryboard().instantiateViewController(withIdentifier: InternalHelper.ViewControllerIdentifier.swRevealVC.rawValue)
-        
         self.present(swRevealVC, animated: true, completion: nil)
     }
 }

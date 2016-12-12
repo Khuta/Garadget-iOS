@@ -11,6 +11,7 @@ import SWRevealViewController
 import Spark_SDK
 import SparkSetup
 import UICircularProgressRing
+import MBProgressHUD
 
 private let doorCellIdentifier = "DoorCell"
 
@@ -25,7 +26,7 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var circleProgressBar: UICircularProgressRingView!
     
-    
+    var needUpdateData: Bool = false
     
     var allDoors: NSMutableArray = NSMutableArray()
     var selectedDoor: DoorModel = DoorModel()
@@ -45,11 +46,32 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
         super.viewDidLoad()
         self.prepareSWRevealView()
         self.prepareNavigationController()
+        self.prepareRefresh()
+        self.prepareData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if needUpdateData {
+            needUpdateData = false
+            self.didUpdateCurrentDoorData()
+        }
+    }
+    
+    func prepareRefresh() {
+        let refreshGesture: UISwipeGestureRecognizer = UISwipeGestureRecognizer()
+        refreshGesture.addTarget(self, action: #selector(VolpisAllDorsViewController.swiped(_:)))
+        refreshGesture.direction = .down
+        self.view.addGestureRecognizer(refreshGesture)
+    }
+    
+    func swiped(_ gesture: UIGestureRecognizer) {
         self.prepareData()
     }
     
     func prepareSWRevealView() {
-        let menuButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_tab_settings"), style: UIBarButtonItemStyle.plain, target: self.revealViewController(), action:#selector(self.revealViewController().revealToggle(_:)))
+        let menuButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "settingsIcon"), style: UIBarButtonItemStyle.plain, target: self.revealViewController(), action:#selector(self.revealViewController().revealToggle(_:)))
         menuButton.tintColor = UIColor.white
         
         self.navigationItem.leftBarButtonItem = menuButton
@@ -63,6 +85,8 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
     }
     
     func prepareData() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        self.allDoors.removeAllObjects()
         SparkCloud.sharedInstance().getDevices { (sparkDevices, error) in
             if (error != nil) {
                 print(error.debugDescription)
@@ -106,7 +130,7 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
                                                         self.allDoors.removeObject(at: 0)
                                                         self.allDoorsCollectionView.reloadData()
                                                         self.didUpdateCurrentDoorData()
-                                                        
+                                                        MBProgressHUD.hide(for: self.view, animated: true)
                                                     }
                                                 }
                                             })
@@ -124,6 +148,7 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
                                 self.allDoors.removeObject(at: 0)
                                 self.allDoorsCollectionView.reloadData()
                                 self.didUpdateCurrentDoorData()
+                                MBProgressHUD.hide(for: self.view, animated: true)
                             }
                         }
                     }
@@ -164,13 +189,12 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
             
             let customizationVC = SparkSetupCustomization.sharedInstance()
             customizationVC?.pageBackgroundColor = UIColor.gray
-            customizationVC?.brandName = "Garadget"
+            customizationVC?.brandName = InternalHelper.DefaultStrings.brand.rawValue
             customizationVC?.brandImage = UIImage(named: "header_icon_black")
             customizationVC?.brandImageBackgroundColor = UIColor.clear
             customizationVC?.productImage = UIImage(named: "garadget_device")
             customizationVC?.elementBackgroundColor = UIColor(colorLiteralRed: 0.0/255.0, green: 102.0/255.0, blue: 1.0/255.0, alpha: 1.0)
             customizationVC?.linkTextColor = UIColor.black
-            
             setupController.delegate = self
             self.present(setupController, animated: true, completion: nil)
         }
@@ -194,13 +218,13 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
             }
             self.doorImageView.image = animateImages.last
             self.doorImageView.animationImages = animateImages
-            self.doorImageView.animationDuration = 4.0
+            self.doorImageView.animationDuration = TimeInterval(self.selectedDoor.doorConfig.doorMovingTime / 1000)
             self.doorImageView.animationRepeatCount = 1
             self.doorImageView.startAnimating()
             
             self.circleProgressBar.fontColor = UIColor.white
             self.circleProgressBar.isHidden = false
-            self.circleProgressBar.setProgress(value: 100, animationDuration: 4) {
+            self.circleProgressBar.setProgress(value: 100, animationDuration: TimeInterval(self.selectedDoor.doorConfig.doorMovingTime / 1000)) {
                 self.circleProgressBar.isHidden = true
                 self.circleProgressBar.setProgress(value: 0, animationDuration: 1.0, completion: nil)
                 
@@ -208,13 +232,15 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
             
             SparkCloud.sharedInstance().getDevice(self.selectedDoor.device.id) { (device, error) in
                 if error == nil {
-                    device?.callFunction("setState", withArguments: [newStatus], completion: { (resultCode, error) in
+                    device?.callFunction(InternalHelper.CallbackFunctions.setState.rawValue, withArguments: [newStatus], completion: { (resultCode, error) in
                         if error == nil {
                             self.selectedDoor.updateDoorData(value: "\(DoorStatusModel.DoorStatusVariables.status.rawValue)=\(newStatus)")
                         }
                     })
                 }
             }
+        } else {
+            self.showAlert(with: InternalHelper.DefaultStrings.brand.rawValue, and: "Device with name \(self.selectedDoor.getDoorName()) is offline")
         }
     }
     
@@ -223,7 +249,12 @@ class VolpisAllDorsViewController: DefaultGaradgetViewController {
     }
     
     @IBAction func didPressAlertsButton(_ sender: Any) {
-        self.performSegue(withIdentifier: SegueIdentifiers.toAlerts.rawValue, sender: self)
+        if self.selectedDoor.device.connected {
+            self.performSegue(withIdentifier: SegueIdentifiers.toAlerts.rawValue, sender: self)
+        } else {
+            self.showAlert(with: InternalHelper.DefaultStrings.brand.rawValue, and: "Device with name \(self.selectedDoor.getDoorName()) is offline")
+        }
+        
     }
     
     @IBAction func didPressAddDoorButton(_ sender: Any) {

@@ -28,6 +28,11 @@ class VolpisSettingsBTableViewCell: VolpisDefaultSettingsTableViewCell, UITextFi
         return true
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.valueTextField.resignFirstResponder()
+        return true
+    }
+    
     // MARK: - Actions
     func textFieldDidChangeValue() {
         self.delegate?.didAskForNameChanging(newNameValue: self.valueTextField.text!)

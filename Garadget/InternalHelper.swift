@@ -40,6 +40,14 @@ class InternalHelper {
     
     enum DefaultStrings: String {
         case allDoorsNavTitle = "Doors"
+        case settings = "Settings"
+        case alerts = "Alerts"
+        case brand = "Garadget"
+    }
+    
+    enum CallbackFunctions: String {
+        case setState = "setState"
+        case updateConfig = "setConfig"
     }
     
     enum GaradgetColors {

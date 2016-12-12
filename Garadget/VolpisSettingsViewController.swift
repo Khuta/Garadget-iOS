@@ -8,6 +8,7 @@
 
 import UIKit
 import Spark_SDK
+import MBProgressHUD
 
 class VolpisSettingsViewController: UIViewController {
     
@@ -28,6 +29,14 @@ class VolpisSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.prepareData()
+        self.prepareNavigationBar()
+    }
+    
+    func prepareNavigationBar() {
+        let newBackButton = UIBarButtonItem(image: UIImage(named: "backArrow"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(VolpisSettingsViewController.back(sender:)))
+        self.navigationItem.title = InternalHelper.DefaultStrings.settings.rawValue
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.leftBarButtonItem = newBackButton
     }
     
     func prepareData() {
@@ -113,7 +122,21 @@ class VolpisSettingsViewController: UIViewController {
     }
 
     // MARK: - Navigation
+    func back(sender: UIBarButtonItem) {
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers 
+        
+        for aViewController in viewControllers {
+            if(aViewController is VolpisAllDorsViewController) {
+                let destinationVC = aViewController as! VolpisAllDorsViewController
+                destinationVC.needUpdateData = true
+                destinationVC.selectedDoor = self.currentDoor
+                self.navigationController!.popToViewController(destinationVC, animated: true)
+            }
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     }
 
 }
@@ -181,13 +204,15 @@ extension VolpisSettingsViewController: SettingsCellProtocol {
     }
     
     func didAskForNameChanging(newNameValue: String) {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         SparkCloud.sharedInstance().getDevice(self.currentDoor.device.id) { (device, error) in
             if error == nil {
                 device?.rename(newNameValue, completion: { (error) in
                     if error == nil {
-                        device?.callFunction("setConfig", withArguments: ["nme=\(newNameValue)"], completion: { (resultCode, error) in
+                        device?.callFunction(InternalHelper.CallbackFunctions.updateConfig.rawValue, withArguments: ["nme=\(newNameValue)"], completion: { (resultCode, error) in
                             if error == nil {
                                 self.currentDoor.updateDoorData(value: "nme=\(newNameValue)")
+                                MBProgressHUD.hide(for: self.view, animated: true)
                             }
                         })
                     }
@@ -201,13 +226,14 @@ extension VolpisSettingsViewController: DropDownProtocol {
     func didAskUpdateData(value: String) {
         self.didCloseDropDownVC()
         let funcArgs = [value]
-        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         SparkCloud.sharedInstance().getDevice(self.currentDoor.device.id) { (device, error) in
             if error == nil {
-                device?.callFunction("setConfig", withArguments: funcArgs, completion: { (resultCode, error) in
+                device?.callFunction(InternalHelper.CallbackFunctions.updateConfig.rawValue, withArguments: funcArgs, completion: { (resultCode, error) in
                     if error == nil {
                         self.currentDoor.updateDoorData(value: value)
                         self.prepareData()
+                        MBProgressHUD.hide(for: self.view, animated: true)
                     }
                 })
             }

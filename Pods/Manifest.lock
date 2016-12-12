@@ -16,6 +16,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Keys (1.0.0)
+  - MBProgressHUD (1.0.0)
   - Spark-SDK (0.5.1):
     - Spark-SDK/Helpers (= 0.5.1)
     - Spark-SDK/SDK (= 0.5.1)
@@ -36,6 +37,7 @@ PODS:
 
 DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
+  - MBProgressHUD (~> 1.0.0)
   - Spark-SDK
   - SparkSetup
   - SWRevealViewController (~> 2.3.0)
@@ -49,11 +51,12 @@ SPEC CHECKSUMS:
   1PasswordExtension: e775a29310c65851e5a6cec1afc349ab4e334e47
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Spark-SDK: 361c1d3aabc88f7c1eada27427cc8997f5a79ac1
   SparkSetup: 0e63d1cce0c16278b798f383f1ece034032df6a7
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
   UICircularProgressRing: c37697577b2f07841fa901ad162959f6f5530204
 
-PODFILE CHECKSUM: 63d371e5e1fcd7596e37f3673af42568b3137705
+PODFILE CHECKSUM: 808db5045f967576134f97c906aa5296978ef28c
 
 COCOAPODS: 1.1.1

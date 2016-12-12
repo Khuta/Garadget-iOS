@@ -28,6 +28,14 @@ class VolpisAlertsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.prepareData()
+        self.prepareNavigationBar()
+    }
+    
+    func prepareNavigationBar() {
+        let newBackButton = UIBarButtonItem(image: UIImage(named: "backArrow"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(VolpisAlertsViewController.back(sender:)))
+        self.navigationItem.title = InternalHelper.DefaultStrings.alerts.rawValue
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.leftBarButtonItem = newBackButton
     }
     
     func prepareData() {
@@ -88,6 +96,10 @@ class VolpisAlertsViewController: UIViewController {
     }
 
     // MARK: - Navigation
+    func back(sender: UIBarButtonItem) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 
@@ -167,7 +179,7 @@ extension VolpisAlertsViewController: AlertsProtocol {
         self.prepareData()
         SparkCloud.sharedInstance().getDevice(self.currentDoor.device.id) { (device, error) in
             if error == nil {
-                device?.callFunction("setConfig", withArguments: [newValue], completion: { (resultCode, error) in
+                device?.callFunction(InternalHelper.CallbackFunctions.updateConfig.rawValue, withArguments: [newValue], completion: { (resultCode, error) in
                     if error == nil {
                         
                     }
@@ -202,7 +214,7 @@ extension VolpisAlertsViewController: DropDownProtocol {
         
         SparkCloud.sharedInstance().getDevice(self.currentDoor.device.id) { (device, error) in
             if error == nil {
-                device?.callFunction("setConfig", withArguments: funcArgs, completion: { (resultCode, error) in
+                device?.callFunction(InternalHelper.CallbackFunctions.updateConfig.rawValue, withArguments: funcArgs, completion: { (resultCode, error) in
                     if error == nil {
                         self.currentDoor.updateDoorData(value: value)
                         self.prepareData()
